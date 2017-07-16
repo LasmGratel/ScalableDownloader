@@ -3,6 +3,10 @@
 
 #include <QDialog>
 #include <QAbstractButton>
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
+#include <QNetworkReply>
+#include "stdafx.h"
 
 namespace Ui {
 class StartDialog;
@@ -18,9 +22,11 @@ public:
 
 private slots:
     void on_buttonBox_clicked(QAbstractButton *button);
+    void downloaded(QNetworkReply *reply);
 
 private:
     Ui::StartDialog *ui;
+    QNetworkAccessManager webController;
 };
 
 #endif // STARTDIALOG_H

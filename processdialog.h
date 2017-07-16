@@ -2,6 +2,7 @@
 #define PROCESSDIALOG_H
 
 #include <QDialog>
+#include "stdafx.h"
 
 namespace Ui {
 class ProcessDialog;
