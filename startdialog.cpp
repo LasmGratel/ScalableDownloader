@@ -32,6 +32,6 @@ void StartDialog::downloaded(QNetworkReply *reply)
 {
     document.fromBinaryData(reply->readAll());
     ui->labelSize->setText(document.object()["size"].toString());
-    ui->textDescription->setText(ui->labelSize->setText(document.object()["fileName"].toString()));
+    ui->textDescription->setText(document.object()["fileName"].toString());
     reply->deleteLater();
 }
